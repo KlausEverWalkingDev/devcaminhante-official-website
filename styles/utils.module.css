@@ -1,0 +1,54 @@
+.heading2Xl, .headingXl, .headingLg {
+    margin: 1rem 0;
+}
+
+.heading2Xl, .headingXl {
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+}
+
+.heading2Xl {
+    font-size: 2.5rem;
+    line-height: 1.2;
+
+}
+
+.headingXl {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
+.headingLg {
+    line-height: 1.4;
+}
+
+.headingMd {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.borderCircle {
+    border-radius: 9999px;
+}
+
+.colorInherit {
+    color: inherit;
+}
+
+.paddingTop1px {
+    padding-top: 1px;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    margin: 0 0 1.25rem;
+}
+
+.lightText {
+    color: #666;
+}
