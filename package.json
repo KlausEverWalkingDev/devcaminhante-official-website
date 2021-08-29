@@ -1,0 +1,37 @@
+{
+  "name": "learn-starter",
+  "version": "1.0.0",
+  "description": "Website Oficial do DevCaminhante",
+  "main": "pages/index.tsx",
+  "private": true,
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevCaminhante/DevCaminhante.github.io.git"
+  },
+  "author": "Klaus Ferreira <klauseverwalkingdev@yandex.com> (https://devcaminhante.org/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/DevCaminhante/DevCaminhante.github.io/issues"
+  },
+  "homepage": "https://github.com/DevCaminhante/DevCaminhante.github.io#readme",
+  "dependencies": {
+    "date-fns": "^2.23.0",
+    "gray-matter": "^4.0.3",
+    "next": "~11.1.0",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "remark": "^13.0.0",
+    "remark-html": "^13.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.7.4",
+    "@types/react": "^17.0.19",
+    "typescript": "^4.4.2"
+  }
+}
