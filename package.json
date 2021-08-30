@@ -1,6 +1,6 @@
 {
   "name": "learn-starter",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Website Oficial do DevCaminhante",
   "main": "pages/index.tsx",
   "private": true,

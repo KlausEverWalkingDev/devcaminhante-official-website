@@ -4,7 +4,7 @@ import matter from 'gray-matter'
 import path from 'path'
 import remark from 'remark'
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), '_posts')
 
 export function getSortedPostsData() {
 	// Get file names under /posts
