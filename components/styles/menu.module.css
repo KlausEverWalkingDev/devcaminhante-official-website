@@ -1,0 +1,16 @@
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li + li {
+    margin-left: 1.25rem;
+}
+
+.menu a, .menu a:visited {
+    color: rgb(55, 65, 81);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}

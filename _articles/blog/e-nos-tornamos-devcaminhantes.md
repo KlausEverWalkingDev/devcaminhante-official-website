@@ -1,6 +1,7 @@
 ---
 title: '...E nos tornamos DevCaminhantes'
 date: '2021-07-07'
+author: klaus-ferreira
 ---
 
 Ufa, mais de dois meses de atraso, mas aqui nós estamos! No dia primeiro de maio desse ano (2021) foi o dia que esse projeto completou 2 anos de existência. O tempo passou tão rápido! Nesse período, muitas pessoas foram chegando à comunidade e no momento da escrita desse post temos um número de 1.282 membros. Agradeço de coração os que todos os dias ou mesmo regularmente interagem com o grupo como se esse fosse sua família :)

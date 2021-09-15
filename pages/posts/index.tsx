@@ -1,37 +1,49 @@
-import styles from "../../components/layout.module.css";
-import utilStyles from "../../styles/utils.module.css";
-import Link from "next/link";
-import Date from "../../components/date";
-import { getSortedPostsData } from "../../lib/posts";
+import PostModel from '../../interfaces/post.model'
+import { getAllPosts, getAuthorBySlug } from '../../lib/api'
 
-export const getStaticProps = async function () {
-	const allPostsData = getSortedPostsData()
+import Image from 'next/image'
+import Link from 'next/link'
 
-	return {
-		props: { allPostsData }
-	}
+export default function Posts({ posts }) {
+	return (
+			<div className="posts">
+				<h1>Posts</h1>
+
+				{posts.map(function (post: PostModel) {
+					const prettyDate = new Date(post.date).toLocaleString('en-US', {
+						month: 'short',
+						day: '2-digit',
+						year: 'numeric'
+					})
+
+					return (
+							<article key={post.slug}>
+								<hr />
+								<h2>
+									<Link href={post.permalink}>
+										<a>{post.title}</a>
+									</Link>
+								</h2>
+
+								<time dateTime={post.date}>{prettyDate}</time>
+
+								<div className="author">
+									<Image alt={post.author.name} src={post.author.profilePictureUrl} height="40" width="40" />
+
+									<span>{post.author.name}</span>
+								</div>
+							</article>
+					)
+
+				})}
+			</div>
+	)
 }
 
-export default function Posts({ allPostsData }) {
-	return (
-			<div className={styles.header}>
-				<header>
-				<h1>Posts</h1>
-				</header>
-				        <section className={`${utilStyles.headingMd} ${utilStyles.paddingTop1px}`}>
-          <ul className={utilStyles.list}>
-            {allPostsData.map(({ id, date, title }) => (
-		            <li className={utilStyles.listItem} key={id}>
-                  <Link href={`/posts/${id}`}>
-                    <a>{title}</a>
-                  </Link><br />
-                  <small className={utilStyles.lightText}>
-                    <Date dateString={date} />
-                  </small>
-                </li>
-            ))}
-          </ul>
-        </section>
-				</div>
-	)
+export function getStaticProps() {
+	return {
+		props: {
+			posts: getAllPosts().map(post =>({ ...post, author: getAuthorBySlug(post["author"]) }))
+		}
+	}
 }
